@@ -1,36 +1,34 @@
 Employees
 -
-emp_no INT PK
-emp_title_id VARCHAR
-birth_date DATE
+emp_no PK INT FK >- Salaries.emp_no
+emp_title_id VARCHAR FK >- Titles.title_id
+birth_date VARCHAR
 first_name VARCHAR
 last_name VARCHAR
 sex VARCHAR
 hire_date DATE
 
 Departments
-- 
-dept_no VARCHAR PK 
+-
+dept_no PK VARCHAR
 dept_name VARCHAR
 
 Dept_Emp
-- 
-emp_no INT FK - employees.emp_no
-dept_no VARCHAR FK - departments.dept_no
-from_date DATE
-to_date DATE
+-
+emp_no INT FK >- Employees.emp_no
+dept_no VARCHAR FK >- Departments.dept_no
 
 Dept_Manager
 -
-dept_no VARCHAR FK - departments.dept_no
-emp_no INT FK - employees.emp_no
+dept_no VARCHAR FK >- Departments.dept_no
+emp_no INT FK >- Employees.emp_no
 
 Salaries
 -
-emp_no INT FK - employees.emp_no
-salaries MONEY
+emp_no INT
+salary MONEY
 
 Titles
 -
-emp_no INT FK - employees.emp_no
+title_id VARCHAR
 title VARCHAR PK
