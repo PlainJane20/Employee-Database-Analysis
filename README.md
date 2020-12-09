@@ -1,6 +1,6 @@
 # Employee Database Analysis
 
-![HRSchema.png](HRSchema.png)
+![HRSchema.png](Images/HRSchema.png)
 
 Using six files listed below I designed the tables to hold the data in the CSVs, import the CSVs files/data into SQL database
 
