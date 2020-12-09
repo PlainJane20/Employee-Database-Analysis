@@ -2,13 +2,13 @@
 
 ![HRSchema.png](Images/HRSchema.png)
 
-Using six files listed below I designed the tables to hold the data in the CSVs, import the CSVs files/data into SQL database
+Using six files listed below, I will design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, I will perform:
 
+* Data Modeling
 
+* Data Engineering
 
-1. Data Engineering
-
-3. Data Analysis
+* Data Analysis
 
 Note: You may hear the term "Data Modeling" in place of "Data Engineering," but they are the same terms. Data Engineering is the more modern wording instead of Data Modeling.
 
