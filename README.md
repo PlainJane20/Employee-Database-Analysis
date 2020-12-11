@@ -14,7 +14,7 @@ Using six files listed below, I will design the tables to hold data in the CSVs,
 
 First I inspected the CSVs files and sketched out an ERD of the tables. Please see below: 
 
-![Schemas01.png](Employee Database/ERD Data/Images/Schemas01.png)
+![Schemas01.png](https://github.com/PlainJane20/Employee-Database-Analysis/blob/master/Employee%20Database/ERD%20Data/Images/Schemas01.png)
 
 ## Instructions
 
