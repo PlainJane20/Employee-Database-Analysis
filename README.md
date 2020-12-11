@@ -16,7 +16,56 @@ First I inspected the CSVs files and sketched out an ERD of the tables. Please s
 
 ![Schemas01.png](https://github.com/PlainJane20/Employee-Database-Analysis/blob/master/Employee%20Database/ERD%20Data/Images/Schemas01.png)
 
-## Instructions
+# Data Engineering
+
+* Next, using the information I created the table schema for each of the six CSV files, I specified data types, primary keys, foreign keys, and other constraints.
+```sql
+CREATE TABLE "Employees" (
+    "emp_no" INT NOT NULL,
+    "emp_title_id" VARCHAR NOT NULL,
+    "birth_date" VARCHAR NOT NULL,
+    "first_name" VARCHAR NOT NULL,
+    "last_name" VARCHAR NOT NULL,
+    "sex" VARCHAR NOT NULL,
+    "hire_date" DATE NOT NULL,
+    CONSTRAINT "pk_Employees" PRIMARY KEY (
+        "emp_no"
+     )
+);
+
+CREATE TABLE "Departments" (
+    "dept_no" VARCHAR NOT NULL,
+    "dept_name" VARCHAR NOT NULL,
+    CONSTRAINT "pk_Departments" PRIMARY KEY (
+        "dept_no"
+     )
+);
+
+CREATE TABLE "Dept_Emp" (
+    "emp_no" INT NOT NULL,
+    "dept_no" VARCHAR NOT NULL
+);
+
+CREATE TABLE "Dept_Manager" (
+    "dept_no" VARCHAR NOT NULL,
+    "emp_no" INT NOT NULL
+);
+
+CREATE TABLE "Salaries" (
+    "emp_no" INT NOT NULL,
+    "salary" MONEY NOT NULL
+);
+
+CREATE TABLE "Titles" (
+    "title_id" VARCHAR NOT NULL,
+    "title" VARCHAR NOT NULL,
+    CONSTRAINT "pk_Titles" PRIMARY KEY (
+        "title"
+     )
+);
+```
+* Import each CSV file into the corresponding SQL table.
+
 
 #### Data Modeling
 
