@@ -10,25 +10,63 @@ Using six files listed below, I will design the tables to hold data in the CSVs,
 
 * Data Analysis
 
-Note: You may hear the term "Data Modeling" in place of "Data Engineering," but they are the same terms. Data Engineering is the more modern wording instead of Data Modeling.
+# Data Modeling
 
-### Before You Begin
+First I inspected the CSVs files and sketched out an ERD of the tables. Please see below: 
 
-1. Create a new repository for this project called `sql-challenge`. **Do not add this homework to an existing repository**.
+![Schemas01.png](https://github.com/PlainJane20/Employee-Database-Analysis/blob/master/Employee%20Database/ERD%20Data/Images/Schemas01.png)
 
-2. Clone the new repository to your computer.
+# Data Engineering
 
-3. Inside your local git repository, create a directory for the SQL challenge. Use a folder name to correspond to the challenge: **EmployeeSQL**.
+* Next, using the information I created the table schema for each of the six CSV files, I specified data types, primary keys, foreign keys, and other constraints.
+```sql
+CREATE TABLE "Employees" (
+    "emp_no" INT NOT NULL,
+    "emp_title_id" VARCHAR NOT NULL,
+    "birth_date" VARCHAR NOT NULL,
+    "first_name" VARCHAR NOT NULL,
+    "last_name" VARCHAR NOT NULL,
+    "sex" VARCHAR NOT NULL,
+    "hire_date" DATE NOT NULL,
+    CONSTRAINT "pk_Employees" PRIMARY KEY (
+        "emp_no"
+     )
+);
 
-4. Add your files to this folder.
+CREATE TABLE "Departments" (
+    "dept_no" VARCHAR NOT NULL,
+    "dept_name" VARCHAR NOT NULL,
+    CONSTRAINT "pk_Departments" PRIMARY KEY (
+        "dept_no"
+     )
+);
 
-5. Push the above changes to GitHub.
+CREATE TABLE "Dept_Emp" (
+    "emp_no" INT NOT NULL,
+    "dept_no" VARCHAR NOT NULL
+);
 
-## Instructions
+CREATE TABLE "Dept_Manager" (
+    "dept_no" VARCHAR NOT NULL,
+    "emp_no" INT NOT NULL
+);
 
-#### Data Modeling
+CREATE TABLE "Salaries" (
+    "emp_no" INT NOT NULL,
+    "salary" MONEY NOT NULL
+);
 
-Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like [http://www.quickdatabasediagrams.com](http://www.quickdatabasediagrams.com).
+CREATE TABLE "Titles" (
+    "title_id" VARCHAR NOT NULL,
+    "title" VARCHAR NOT NULL,
+    CONSTRAINT "pk_Titles" PRIMARY KEY (
+        "title"
+     )
+);
+```
+* Import each CSV file into the corresponding SQL table.
+
+
 
 #### Data Engineering
 
@@ -63,5 +101,5 @@ Once you have a complete database, do the following:
 
 
 
-### Navi Sohi | Data Analycis
+### Navi Sohi | Data Analytics 
 
