@@ -10,9 +10,22 @@ Using six files listed below, I will design the tables to hold data in the CSVs,
 
 * Data Analysis
 
+# Technologies used
+* ERD diagram created via https://app.quickdatabasediagrams.com/
+
+* PostgreSQL
+
+* Pandas
+
+* SQLAlchemy
+
+* Matplotlib
+
+* Jupyter Notebook
+
 # Data Modeling
 
-First I inspected the CSVs files and sketched out an ERD of the tables. Please see below: 
+First I inspected the CSVs files and sketched out an ERD of the tables, Please see below: 
 
 ![Schemas01.png](https://github.com/PlainJane20/Employee-Database-Analysis/blob/master/Employee%20Database/ERD%20Data/Images/Schemas01.png)
 
@@ -64,19 +77,6 @@ CREATE TABLE "Titles" (
      )
 );
 ```
-* Import each CSV file into the corresponding SQL table.
-
-
-
-#### Data Engineering
-
-* Use the information you have to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
-
-  * For the primary keys check to see if the column is unique, otherwise create a [composite key](https://en.wikipedia.org/wiki/Compound_key). Which takes to primary keys in order to uniquely identify a row.
-  * Be sure to create tables in the correct order to handle foreign keys.
-
-* Import each CSV file into the corresponding SQL table. **Note** be sure to import the data in the same order that the tables were created and account for the headers when importing to avoid errors.
-
 #### Data Analysis
 
 Once you have a complete database, do the following:
