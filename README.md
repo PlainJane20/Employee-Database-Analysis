@@ -101,5 +101,5 @@ Once you have a complete database, do the following:
 
 
 
-### Navi Sohi | Data Analytics 
+### Navi Sohi | Data Analytics & Visualization
 
