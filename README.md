@@ -10,19 +10,6 @@ Using six files listed below, I will design the tables to hold data in the CSVs,
 
 * Data Analysis
 
-# Technologies used
-* ERD diagram created via https://app.quickdatabasediagrams.com/
-
-* PostgreSQL
-
-* Pandas
-
-* SQLAlchemy
-
-* Matplotlib
-
-* Jupyter Notebook
-
 # Data Modeling
 
 First I inspected the CSVs files and sketched out an ERD of the tables, Please see below: 
@@ -97,7 +84,7 @@ Once you have a complete database, do the following:
 
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
-## Bonus (Optional)
+### Bonus (Optional)
 
 As we examined the data, we were overcome with a creeping suspicion that the dataset is fake. We surmised that our boss handed us spurious data in order to test our data engineering skills since we were a new employee. To confirm our hunch, we decided to take the following steps to generate a visualization of the data, with which we will confront our boss:
 
