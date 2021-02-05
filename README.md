@@ -64,19 +64,25 @@ CREATE TABLE "Titles" (
      )
 );
 ```
-#### Data Analysis
+## Dependencies/Tools
+* ERD sketch tool, such as [QuickDatabaseDiagrams](http://www.quickdatabasediagrams.com/)
+* SQL database (PostgreSQL used here)
+* SQL client (used pgAdmin)
+* Docker container (used for hosting SQL database + client). YAML file for Postgres + pgAdmin found [here](https://github.com/khezen/compose-postgres)
+* (**BONUS**) pandas + sqlalchemy modules in Python
 
-Once you have a complete database, do the following:
+## Overview
+I have been tasked by the fictional Pewlett-Hackard company to discover some insights on their employee data from the 1980s and 1990s. Using the provided data, I create a data model including an ERD diagram and table schema that includes specific data types, primary keys, foreign keys, and other constraints. Data collected from CSVs is then loaded to the SQL database and the following analysis questions are answered using SQL queries:
 
-1. List the following details of each employee: employee number, last name, first name, sex, and salary.
+1. List the following details of each employee: employee number, last name, first name, gender, and salary.
 
-2. List first name, last name, and hire date for employees who were hired in 1986.
+2. List employees who were hired in 1986.
 
-3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates.
 
 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
-5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+5. List all employees whose first name is "Hercules" and last names begin with "B."
 
 6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
@@ -84,24 +90,12 @@ Once you have a complete database, do the following:
 
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
-### Bonus (Optional)
+As a BONUS, it is suspected that the given data is fake. To prove it, a Jupyter Notebook has been provided to create a bar chart of average salary by title to show that not all is well in the data.
 
-As we examined the data, we were overcome with a creeping suspicion that the dataset is fake. We surmised that our boss handed us spurious data in order to test our data engineering skills since we were a new employee. To confirm our hunch, we decided to take the following steps to generate a visualization of the data, with which we will confront our boss:
-
-1. The SQL database was imported into Pandas using a .gitignore and a config.py file to store the username/password to connect to the database. The Jupyter notebook can be found here: [].ipynb)
-
-2. A histogram was created to visualize the most common salary ranges for employees. It was $40,000-$50,000 for the majority of the employees.
-![Histogram of Salaries](/EmployeeSQL/Salary_Histogram.jpg)
-This histogram looks suspicious because the vast majority of employees are paid between $40k and $50k.
-
-3. A bar chart of average salary by title was created. ![Average Salary by Title](/EmployeeSQL/Average_Salary_Title.jpg)
-This bar chart also looks as though it is using manufactured data, since it is unlikely that all the job titles would have roughly the same salary avearage.
-
-## Epilogue
-
-Evidence in hand, you march into your boss's office and present the visualization. With a sly grin, your boss thanks you for your work. On your way out of the office, you hear the words, "Search your ID number." You look down at your badge to see that your employee ID number is 499942.
-The name turns out to be "April Foolsday" so this was an exercise by my boss afterall.
-
+## Directory Structure
+* **/raw_data** - contains given CSV files for employee and department related data
+* **/EmployeeSQL** - contains bonus analysis in Jupyter notebook (NOTE: a config.py file containing the username, password, host, and port must be provided to run the notebook analyses) and in-depth description of data engineering steps
+    * **/data_model** - contains ERD sketch, schema DDL, and SQL queries to answer the above questions
 
 
 ### Navi Sohi | Data Analytics & Visualization
