@@ -92,5 +92,5 @@ I have been tasked by the fictional Pewlett-Hackard company to discover some ins
 
 As a BONUS, it is suspected that the given data is fake. To prove it, a Jupyter Notebook has been provided to create a bar chart of average salary by title to show that not all is well in the data.
 
-### Navi Sohi | Data Analytics & Visualization
+### [Navi Sohi](https://github.com/PlainJane20) | Data Analytics & Visualization
 
